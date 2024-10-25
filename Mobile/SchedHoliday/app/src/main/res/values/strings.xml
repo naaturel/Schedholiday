@@ -1,0 +1,67 @@
+<resources>
+    <string name="app_name">SchedHoliday</string>
+
+    <!--button-->
+    <string name="button_connection">Connexion</string>
+    <string name="button_register">S\'inscrire</string>
+    <string name="button_detail">Détails</string>
+    <string name="button_add_holiday">Créer un voyage</string>
+    <string name="button_switch_map">Carte</string>
+    <string name="button_route_map">Itinéraire</string>
+    <string name="button_create">Créer</string>
+    <string name="button_tchat">Messages</string>
+    <string name="button_add_user">Ajouter des utilisateurs</string>
+    <string name="button_meteo">Météo</string>
+    <string name="button_schedule">Emploi du temps</string>
+
+    <!--input commun-->
+    <string name="input_name">Nom</string>
+    <string name="input_email">Email</string>
+    <string name="input_date_start_holiday">Date de début</string>
+    <string name="input_date_end_holiday">Date de fin</string>
+
+    <!--text Accueil-->
+    <string name="title_accueil">Acceuil</string>
+    <string name="title_holiday">Title holiday</string>
+    <string name="date_holiday">Date holiday</string>
+
+    <!--text register and Connection-->
+    <string name="title_register">Inscription</string>
+    <string name="title_connection">Connexion</string>
+    <string name="input_firstname">Prénom</string>
+    <string name="input_password">Mot de passe</string>
+    <string name="input_confirm">Confirmer</string>
+
+    <!--text create Holiday-->
+    <string name="title_create_holiday">Création d\'un voyage</string>
+    <string name="input_name_holiday">Nom du voyage</string>
+    <string name="input_adress_holiday">Adresse complete</string>
+    <string name="text_map">Ajouter une destination via la carte</string>
+    <string name="street_input">Rue</string>
+    <string name="num_input">Numéro</string>
+    <string name="code_input">Code postal</string>
+    <string name="locality_input">Localité</string>
+
+    <!--text create Activity-->
+    <string name="title_activity_create">Création d\'une activité</string>
+    <string name="input_description">Description</string>
+
+    <!--text holiday details-->
+    <string name="title_detail_holiday">Name holiday</string>
+    <string name="date_detail_holiday">Date holiday</string>
+    <string name="meteo_detail_holiday">Meteo holiday</string>
+
+    <!--text add user-->
+    <string name="title_add_User">Ajouter une personne</string>
+
+    <!--erreur message-->
+    <string name="error_empty_input">Veuillez remplir tous les champs</string>
+
+
+    <!--Schedule item placeholder data-->
+    <string name="item_placeholder_description">Activity_placeholder_description</string>
+    <string name="item_placeholder_name">Activity_placeholder_name</string>
+    <string name="item_placeholder_start_date">A long time ago</string>
+    <string name="item_placeholder_end_date">At the end of time</string>
+
+</resources>

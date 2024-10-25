@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--<ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">-->
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_button_back_button"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        app:cardElevation="10dp"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintStart_toStartOf="@+id/holiday_title"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/button_back_button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/cardview_light_background"
+            android:src="@drawable/ic_back"/>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_chat_button"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:cardElevation="10dp"
+        app:cardCornerRadius="15dp"
+        android:layout_marginEnd="@dimen/default_margin"
+        app:layout_constraintEnd_toStartOf="@+id/card_route_button"
+        app:layout_constraintTop_toTopOf="@id/card_button_back_button">
+
+        <ImageButton
+            android:id="@+id/chat_button"
+            style="@style/Button"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@color/cardview_light_background"
+            android:layout_marginEnd="@dimen/default_margin"
+            android:hint="@string/button_tchat"
+            android:src="@drawable/ic_chat"/>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <TextView
+        android:id="@+id/holiday_title"
+        style="@style/TitleTextStyle"
+        android:layout_width="350dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="30dp"
+        android:hint="@string/title_detail_holiday"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/card_chat_button" />
+
+    <TextView
+        android:id="@+id/holiday_date"
+        style="@style/DefaultTextStyle"
+        android:layout_width="@+id/holiday_title"
+        android:layout_height="30dp"
+        android:hint="@string/date_holiday"
+        android:textAlignment="center"
+        android:gravity="center"
+
+        app:layout_constraintEnd_toEndOf="@+id/holiday_title"
+        app:layout_constraintStart_toStartOf="@+id/holiday_title"
+        app:layout_constraintTop_toBottomOf="@+id/holiday_title" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_user"
+        android:layout_width="@+id/holiday_title"
+        android:layout_height="wrap_content"
+        android:maxHeight="150dp"
+        android:scrollbars="vertical"
+        app:layoutManager="LinearLayoutManager"
+        app:layout_constraintBottom_toTopOf="@+id/meteo_box"
+        app:layout_constraintEnd_toEndOf="@+id/holiday_date"
+        app:layout_constraintStart_toStartOf="@+id/holiday_date"
+        app:layout_constraintTop_toBottomOf="@+id/holiday_date" />
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_add_user_button"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="@dimen/default_margin"
+        app:cardElevation="10dp"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintEnd_toStartOf="@+id/card_schedule_button"
+        app:layout_constraintTop_toTopOf="@+id/card_route_button"
+        >
+
+        <ImageButton
+            android:id="@+id/add_user_button"
+            style="@style/Button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/cardview_light_background"
+            android:hint="@string/button_add_user"
+            android:src="@drawable/ic_add_user"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_route_button"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:elevation="@dimen/default_margin"
+        app:cardElevation="10dp"
+        app:cardCornerRadius="15dp"
+        android:layout_marginEnd="@dimen/default_margin"
+        app:layout_constraintEnd_toStartOf="@+id/card_add_user_button"
+        app:layout_constraintTop_toTopOf="@id/card_chat_button" >
+
+
+        <ImageButton
+            android:id="@+id/route_button"
+            style="@style/Button"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="@dimen/default_margin"
+            android:background="@color/cardview_light_background"
+            android:hint="@string/button_route_map"
+            android:src="@drawable/ic_map"
+            android:elevation="15dp" />
+
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_schedule_button"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:cardElevation="10dp"
+        app:cardCornerRadius="15dp"
+
+        app:layout_constraintEnd_toEndOf="@+id/holiday_title"
+        app:layout_constraintTop_toTopOf="@+id/card_add_user_button" >
+
+        <ImageButton
+            android:id="@+id/schedule_button"
+            style="@style/Button"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@color/cardview_light_background"
+            android:hint="@string/button_schedule"
+            android:src="@drawable/ic_calendar"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/meteo_box"
+        android:layout_width="@+id/holiday_title"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/cardview_light_background"
+        app:cardElevation="10dp"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/recycler_view_user"
+        app:layout_constraintStart_toStartOf="@+id/recycler_view_user"
+        app:layout_constraintTop_toBottomOf="@id/recycler_view_user">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/default_margin"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/meteo"
+                style="@style/TitleTextStyle"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:hint="@string/meteo_detail_holiday"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/meteo_picture" />
+
+            <ImageView
+                android:id="@+id/meteo_picture"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/ic_01d"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout >
+
+<!--</ScrollView>-->

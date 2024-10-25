@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/activity_connection"
+    android:background="@color/background">
+
+    <TextView
+        android:id="@+id/register_title"
+        style="@style/TitleTextStyle"
+        android:layout_width="156dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="124dp"
+        android:layout_marginTop="96dp"
+        android:hint="@string/title_connection"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/error_message_register"
+        style="@style/ErrorTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/register_title" />
+
+    <EditText
+        android:id="@+id/email_input"
+        style="@style/Input"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="@dimen/default_margin"
+        android:layout_marginEnd="@dimen/default_margin"
+        android:layout_marginTop="50dp"
+        android:hint="@string/input_email"
+        android:inputType="textEmailAddress"
+        android:text="auva@gmail.com"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/error_message_register" />
+
+
+    <EditText
+        android:id="@+id/password_input"
+        style="@style/Input"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="@dimen/default_margin"
+        android:layout_marginEnd="@dimen/default_margin"
+        android:layout_marginTop="20dp"
+        android:hint="@string/input_password"
+        android:inputType="textPassword"
+        android:text="Password_123"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/email_input" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_register_button"
+        android:layout_width="140dp"
+        android:layout_height="50dp"
+        app:layout_constraintStart_toStartOf="@id/password_input"
+        app:layout_constraintTop_toTopOf="@+id/card_connection_button"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="10dp">
+
+        <Button
+            android:id="@+id/register_button"
+            style="@style/Button"
+            android:layout_width="140dp"
+            android:layout_height="50dp"
+            android:background="@color/cardview_light_background"
+            android:text="@string/button_register"/>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_connection_button"
+        android:layout_width="140dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="70dp"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="10dp"
+        app:layout_constraintEnd_toEndOf="@id/password_input"
+        app:layout_constraintTop_toBottomOf="@id/password_input">
+
+        <Button
+            android:id="@+id/connection_button"
+            style="@style/Button"
+            android:layout_width="140dp"
+            android:layout_height="50dp"
+            android:background="@color/cardview_light_background"
+            android:text="@string/button_connection" />
+
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
